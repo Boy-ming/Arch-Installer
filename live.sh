@@ -132,7 +132,7 @@ install(){
 }
 
 config(){
-    wget https://raw.githubusercontent.com/YangMame/Arch-Installer/master/config.sh -O /mnt/root/config.sh
+    wget https://raw.githubusercontent.com/Boy-ming/Arch-Installer/master/config.sh -O /mnt/root/config.sh
     chmod +x /mnt/root/config.sh
     arch-chroot /mnt /root/config.sh
 }
