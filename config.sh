@@ -35,7 +35,7 @@ config_locale(){
         fi
         break
     done
-    #hwclock --systohc --utc
+    #hwclock --systohc --utc 
     color yellow "Choose your language"
     select LNAG in "en_US.UTF-8" "zh_CN.UTF-8";do
         echo "$LNAG UTF-8" > /etc/locale.gen
@@ -203,7 +203,7 @@ install_app(){
             cd ..
             rm -rf package-query yaourt"
         fi
-    pacman -S --noconfirm networkmanager xorg-server firefox wqy-zenhei
+    pacman -S --noconfirm networkmanager xorg-server google-chrome wqy-zenhei
     systemctl enable NetworkManager
     if [ "$GPU" == "Intel and Nvidia" ];then
         gpasswd -a $USER bumblebee
